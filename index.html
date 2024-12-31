@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="descriptio" content="Projeto que desenvolve um menu suspenso
+                                     personalizado que permite o usário selecionar
+                                     um item de uma lista" />
+    <meta name="keywords" content="JavaScript, Custom Dropdown, Projeto" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <style>
+        .dropdown-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .button-selector {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: transparent;
+            width: 150px;
+            padding: 3px 8px;
+        }
+        .option-container {
+            display: none;
+            flex-direction: column;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            list-style: none;
+            min-width: 150px;
+            margin: 10px 0;
+            padding: 0;
+        }
+        .option-container > li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .option-container > li:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+        .option-container > li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+        .option-container > li > span {
+            font-size: 12px;
+        }
+    </style>
+    <title>Custom Dropdown</title>
+</head>
+<body>
+    <div class="dropdown-container">
+        <button class="button-selector"><span>Select an Item</span> <span>▼</span></button>
+        <ul class="option-container">
+            <li>First Item <span></span></li>
+            <li>Second Item <span></span></li>
+            <li>Third Item <span></span></li>
+            <li>Fourth Item <span></span></li>
+            <li>Fifth Item <span></span></li>
+        </ul>
+    </div>
+</body>
+</html>
